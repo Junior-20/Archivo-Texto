@@ -12,5 +12,6 @@ namespace Archivo_Texto
         public string NumeroNomina { get; set; }
         public string Cedula { get; set; }
         public string SalarioNeto { get; set; }
+        public string Dependientes { get; set; }
     }
 }
