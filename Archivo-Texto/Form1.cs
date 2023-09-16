@@ -24,7 +24,7 @@ namespace Archivo_Texto
         {
             // Obtener los datos desde los controles del formulario
             string RNC = txtrnc.Text;
-            string TipoRegistro = txtregistro.Text;
+            string TipoRegistro = texregistro.Text;
             string fechaTransmision = dateTimePicker1.Value.ToString("dd/MM/yyyy");
             string fechaAutodeterminacion = dateTimePicker2.Value.ToString("dd/MM/yyyy");
             string nomina = textnomina.Text;
@@ -53,6 +53,13 @@ namespace Archivo_Texto
                 }
 
                 MessageBox.Show("Datos guardados en el archivo de texto en la carpeta de Descargas correctamente.");
+                txtrnc.Text = "";
+                texregistro.Text = "";
+                txtdependientes.Text = "";
+                textnomina.Text = "";
+                textcedula.Text = "";
+                textsalario.Text = "";
+
             }
             catch (Exception ex)
             {
@@ -122,8 +129,9 @@ namespace Archivo_Texto
 
         private void txtregistro_Click(object sender, EventArgs e)
         {
-
+            
         }
+        
 
 
 
