@@ -25,8 +25,8 @@ namespace Archivo_Texto
             // Obtener los datos desde los controles del formulario
             string RNC = txtrnc.Text;
             string TipoRegistro = txtregistro.Text;
-            string fechaTransmision = dateTimePicker1.Text;
-            string fechaAutodeterminacion = dateTimePicker2.Text;
+            string fechaTransmision = dateTimePicker1.Value.ToString("dd/MM/yyyy");
+            string fechaAutodeterminacion = dateTimePicker2.Value.ToString("dd/MM/yyyy");
             string nomina = textnomina.Text;
             string cedula = textcedula.Text;
             string salario = textsalario.Text;
@@ -94,8 +94,8 @@ namespace Archivo_Texto
                         registro["Fecha T"] = linea[2];
                         registro["Fecha A"] = linea[3];
                         registro["Nomina"] = linea[4];
-                        //registro["Cedula"] = linea[5];
-                        registro["Cedula"] = linea[5].Insert(3, "-").Insert(11, "-");
+                        registro["Cedula"] = linea[5];
+                        registro["Cedula"] = linea[5]; //.Insert(3, "-").Insert(11, "-");
                         registro["Salario"] = linea[6];
                         registro["Dependientes"] = linea[7];
                         dataTable.Rows.Add(registro);
